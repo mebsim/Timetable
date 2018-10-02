@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C74A5DF2028ED3200E7D89C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74A5DE2028ED3200E7D89C /* ScheduleViewController.swift */; };
 		9CB233AA1F9E241400424099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB233A91F9E241400424099 /* AppDelegate.swift */; };
-		9CB233AC1F9E241400424099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB233AB1F9E241400424099 /* ViewController.swift */; };
 		9CB233AE1F9E241400424099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB233AD1F9E241400424099 /* Assets.xcassets */; };
 		9CB233B11F9E241400424099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB233AF1F9E241400424099 /* Main.storyboard */; };
+		9CED9C551F9E5AB00088F7ED /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9C541F9E5AB00088F7ED /* TimetableViewController.swift */; };
+		9CED9C591F9E5EA30088F7ED /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED9C581F9E5EA30088F7ED /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C74A5DE2028ED3200E7D89C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		9CB233A61F9E241400424099 /* TimetableMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimetableMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB233A91F9E241400424099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CB233AB1F9E241400424099 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CB233AD1F9E241400424099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CB233B01F9E241400424099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CB233B21F9E241400424099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB233B31F9E241400424099 /* TimetableMenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimetableMenuBar.entitlements; sourceTree = "<group>"; };
+		9CED9C541F9E5AB00088F7ED /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		9CED9C581F9E5EA30088F7ED /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +58,13 @@
 			isa = PBXGroup;
 			children = (
 				9CB233A91F9E241400424099 /* AppDelegate.swift */,
-				9CB233AB1F9E241400424099 /* ViewController.swift */,
+				9CED9C541F9E5AB00088F7ED /* TimetableViewController.swift */,
 				9CB233AD1F9E241400424099 /* Assets.xcassets */,
 				9CB233AF1F9E241400424099 /* Main.storyboard */,
-				9CB233B21F9E241400424099 /* Info.plist */,
+				9CED9C581F9E5EA30088F7ED /* EventMonitor.swift */,
 				9CB233B31F9E241400424099 /* TimetableMenuBar.entitlements */,
+				9CB233B21F9E241400424099 /* Info.plist */,
+				9C74A5DE2028ED3200E7D89C /* ScheduleViewController.swift */,
 			);
 			path = TimetableMenuBar;
 			sourceTree = "<group>";
@@ -90,11 +96,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Mohamed Ebsim";
 				TargetAttributes = {
 					9CB233A51F9E241400424099 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CB233AC1F9E241400424099 /* ViewController.swift in Sources */,
+				9CED9C591F9E5EA30088F7ED /* EventMonitor.swift in Sources */,
+				9CED9C551F9E5AB00088F7ED /* TimetableViewController.swift in Sources */,
 				9CB233AA1F9E241400424099 /* AppDelegate.swift in Sources */,
+				9C74A5DF2028ED3200E7D89C /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +176,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -174,6 +184,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -224,6 +235,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -231,6 +243,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -270,7 +283,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mebsim.TimetableMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -285,7 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mebsim.TimetableMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
