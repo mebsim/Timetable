@@ -12,9 +12,11 @@ class TimetableViewController: NSViewController {
     
     @IBOutlet var titleLabel: NSTextField!
     @IBOutlet var textLabel: NSTextField!
+    @IBOutlet var dayLabel: NSTextField!
     
     let daysInMonths: [Int] = [31, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30]
     let nameOfMonths: [String] = ["December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber"]
+    let nameOfWeekdays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
     let holidaysByDate: [Int] = [1008, 1109, 1112, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 101, 102, 103, 104, 105, 106, 215, 218, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 419, 422, 520]
     
@@ -25,8 +27,20 @@ class TimetableViewController: NSViewController {
     
     var day: Int?
     var month: Int?
+    var dayOfWeek: Int = 4
     
     var timetable = ["","","","","","","",""]
+    
+    /*
+     
+     TODO: Simplify and optimize the method of calculating the day of the cycle
+     IDEAS:
+        Count from the beginning of each month?
+        Calculate 4 points even throughout the year and calculate from them
+     
+     TODO: Sreamline the updating of the popover, without having to call the getDayOfCycle method too often
+     
+    */
     
     func readFile() -> String {
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
@@ -123,7 +137,7 @@ class TimetableViewController: NSViewController {
         var cycle: Int = 1 // cycle number
         var countMonth: Int = 9 // month for counting
         var countDay: Int = 5 // day of month for counting
-        var dayOfWeek: Int = 4 // Day of week
+        dayOfWeek = 4 // Day of week
         var isHoliday: Bool = false // Is it a holiday?
         var isNoSchool: Bool = false // Is there no school?
         
@@ -231,7 +245,13 @@ class TimetableViewController: NSViewController {
     
     func updateDay() {
         let a = getTimetable()
-        titleLabel.stringValue = String(nameOfMonths[month!] + " " + String(describing: day!))
+        titleLabel.stringValue = String(nameOfWeekdays[dayOfWeek-1] + " " + nameOfMonths[month!] + " " + String(describing: day!))
+        let dayOf = getDayOfCycle()
+        if (dayOf != 10) {
+            dayLabel.stringValue = "Day " + String(getDayOfCycle())
+        } else {
+            dayLabel.stringValue = ""
+        }
         textLabel.stringValue = String(a)
     }
     
