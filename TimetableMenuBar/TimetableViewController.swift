@@ -35,12 +35,12 @@ class TimetableViewController: NSViewController {
      
      TODO: Simplify and optimize the method of calculating the day of the cycle
      IDEAS:
-        Count from the beginning of each month?
-        Calculate 4 points even throughout the year and calculate from them
+     Count from the beginning of each month?
+     Calculate 4 points even throughout the year and calculate from them
      
      TODO: Sreamline the updating of the popover, without having to call the getDayOfCycle method too often
      
-    */
+     */
     
     func readFile() -> String {
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
@@ -96,7 +96,7 @@ class TimetableViewController: NSViewController {
     }
     
     func getDayOfCycle() -> Int {
-
+        
         let now = NSDate()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd"
@@ -152,12 +152,12 @@ class TimetableViewController: NSViewController {
                 countMonth = countMonth + 1
             }
             /*for i in holidays {
-                if(totalDayCount == i) {
-                    // System.out.println("It's a holiday on the " + dayOfMonth2 + ". It's index is: " + i + ". Overall date = " + dayOfMonth3);
-                    //isNoSchool = true;
-                    break;
-                }
-            }*/
+             if(totalDayCount == i) {
+             // System.out.println("It's a holiday on the " + dayOfMonth2 + ". It's index is: " + i + ". Overall date = " + dayOfMonth3);
+             //isNoSchool = true;
+             break;
+             }
+             }*/
             for i in holidaysByDate {
                 //print("Holiday on?",countMonth%12)
                 //print("Holiday on?",countDay)
