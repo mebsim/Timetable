@@ -247,7 +247,7 @@ class TimetableViewController: NSViewController {
         let a = getTimetable()
         titleLabel.stringValue = String(nameOfWeekdays[dayOfWeek-1] + " " + nameOfMonths[month!] + " " + String(describing: day!))
         let dayOf = getDayOfCycle()
-        if (dayOf != 10) {
+        if (dayOf != 10 && dayOf != 11) {
             dayLabel.stringValue = "Day " + String(getDayOfCycle())
         } else {
             dayLabel.stringValue = ""
